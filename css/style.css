@@ -51,6 +51,7 @@ button {margin: 0;
     margin-left: 16px;
     margin-top: 24px;
     margin-bottom: 24px;
+    cursor: pointer;
   }
 
   .header-main__menu-item:last-child {
@@ -77,6 +78,7 @@ button {margin: 0;
   .header-main__logo {
     margin-right: auto;
     position: relative;
+    cursor: pointer;
   }
   .header-main__logo:after {
     content: ""; 
@@ -107,6 +109,7 @@ button {margin: 0;
     font-size: 28px;
     font-weight: 700;
     color: #1B1C21;
+    cursor: pointer;
   }
 
   .services__h1:before {content: '';
@@ -143,6 +146,9 @@ button {margin: 0;
     font-size: 16px;
     font-weight: 400;
     color: #7E7E82;
+    border: 2px solid #F8F8F8;
+    padding: 8px 15px;
+    cursor: pointer;
   }
 
   .servises__menu,
@@ -162,7 +168,7 @@ button {margin: 0;
   .servises__menu__item--active:focus {
     background: #FFFFFF;
     border: 2px solid #B8FFEC;
-    padding: 8px 15px;
+   /* padding: 8px 15px;*/
     border-radius: 6px;
   }
 
@@ -251,11 +257,10 @@ button {margin: 0;
 
     .services__wrapper-info-img img {
       margin-top: 41px;
+      padding-bottom: 0;
+      margin-bottom: 24px;
     }
 }
-
-/*header {z-index: 10;}
-main {position: relative; z-index: 2;}*/
 
 
 @media (min-width: 1120px) {
