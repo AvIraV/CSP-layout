@@ -17,14 +17,20 @@ button {margin: 0;
   
 
   .container {
-    position: fixed;
-    top: 0;
-    left: 0;       
     width: 100%;
-    max-width: 320px;
+    height: 100vh;
     margin: 0 auto;
     background: #FFFFFF;
     
+  }
+
+  .menu {
+    max-width: 320px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    overflow-y: scroll;
   }
 
 
@@ -70,6 +76,12 @@ button {margin: 0;
   margin-right: 24px;
 }
 
+.menu__navigation {
+  
+  margin-bottom: 265px;
+  margin-top: 32px;
+}
+
 .menu__navigation__list {
   position: relative;
   list-style: none;
@@ -89,9 +101,9 @@ button {margin: 0;
   letter-spacing: -0.2px;
 }
 
-.menu__navigation__list:first-child {
+/*.menu__navigation__list:first-child {
   padding-top: 32px;
-}
+}*/
 
 .menu__navigation__item::before {
   content: '';
@@ -120,11 +132,19 @@ button {margin: 0;
   color: #7E7E82;
 }
 
+.menu__footer {
+  display: flex;
+  flex-direction: column;
+ /*justify-content: space-between;*/
+ margin-top: auto;
+  
+}
+
 .menu__footer__items {
   display: flex; 
   align-items: center; 
   opacity: 1;
-  margin-top: 252px;
+  /*margin-top: 252px;*/
   
 }
 
