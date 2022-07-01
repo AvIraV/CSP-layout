@@ -17,9 +17,9 @@ button {margin: 0;
   
 
   .container {
-   /* position: fixed;
+    position: fixed;
     top: 0;
-    left: 0;        ? пропадает нижняя часть футера*/
+    left: 0;       
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
