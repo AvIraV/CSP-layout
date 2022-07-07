@@ -160,7 +160,7 @@ button {margin: 0;
   } 
 
   .servises__menu__list  {
-    overflow-x: hidden;
+    overflow-x: scroll;
   }
 
   .servises__menu__item--active:hover,
@@ -197,6 +197,14 @@ button {margin: 0;
     color: #1B1C21;
   }
 
+  .services__more-text {
+    display: none;
+  }
+
+  .services__wrapper-info__more-text.show-more .services__more-text {
+    display: inline;
+  }
+
   .services__wrapper-info,
   .services__wrapper-info-img {
     width: 100%;
@@ -229,6 +237,10 @@ button {margin: 0;
     .services__wrapper-info,
     .services__wrapper-info-img {
       width: 50%;
+    }
+
+    .services__more-text {
+      display: inline;
     }
 
     .header-main__logo:before {
@@ -305,6 +317,10 @@ button {margin: 0;
 
     .servises__menu {
       padding-top: 8px;
+    }
+
+    .servises__menu__list  {
+      overflow-x: hidden;
     }
 }
 
