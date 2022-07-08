@@ -1,11 +1,15 @@
-const readMoreBtn = document.querySelector('.services__more-btn');
-const text = document.querySelector('.services__wrapper-info__more-text');
-
-readMoreBtn.addEventListener('click',(e) => {
-    text.classList.toggle('show-more');
-    if (readMoreBtn.innerText === 'Читать далее') {
-        readMoreBtn.innerText = 'Читать меньше';
+function myFunction() {
+    var dots = document.querySelector(".services__read-more__dots");
+    var moreText = document.querySelector(".services__read-more");
+    var btnText = document.querySelector(".services__read-more-btn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Читать больше";
+      moreText.style.display = "none";
     } else {
-        readMoreBtn.innerText = 'Читать далее';
+      dots.style.display = "none";
+      btnText.innerHTML = "Скрыть";
+      moreText.style.display = "inline";
     }
-})
+  }
