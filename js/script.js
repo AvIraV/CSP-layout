@@ -13,4 +13,4 @@ function myFunction() {
       moreText.style.display = "inline";
     }
   }
-  /*first code*/
+  
