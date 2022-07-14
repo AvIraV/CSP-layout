@@ -2,12 +2,6 @@ html {
     box-sizing: border-box;
   }
 
-button {margin: 0;
-   box-shadow: none; 
-   border: 0px solid; 
-   background: none;
-  }  
-
 
   *, *:before, *:after {
     box-sizing: inherit;

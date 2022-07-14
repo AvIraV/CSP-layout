@@ -1,55 +1,6 @@
-/*new Swiper('.swiper-container', {
 
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    pagination: {
-       el: '.swiper-pagination',
-       clickable: true, 
-    },
-
-    slidesPerView: 'auto',
-    
-});
-*/
-
-
-
-/*
-
-let width = window.matchMedia('(max-width: 767px)');
-var swiper = document.querySelector('.swiper-container').swiper;
-
-
-window.addEventListener('resize', () => {
-  if (width.matches) {
-    swiper = new Swiper('.swiper-container', {
-
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
-  
-      pagination: {
-         el: '.swiper-pagination',
-         clickable: true, 
-      },
-  
-      slidesPerView: 'auto',
-      
-  });
-  
-  } else {
-swiper.destroy(true, true);
-  }
-});
-
-*/
-    
-
-window.onload =  () => {  // ожидаем загрузку окна браузера
+document.addEventListener("DOMContentLoaded", function(){
+ 
   if (window.matchMedia('(max-width: 767px)').matches) { // // свайпер у нас будет работать, если разрешение эерана не превышает 767px
     let swiper = new Swiper('.swiper-container', {  
       direction: 'horizontal',
@@ -72,18 +23,18 @@ window.onload =  () => {  // ожидаем загрузку окна брауз
       },
       init: true
     });
-  } else if (window.matchMedia('(width: 768px)').matches) {
-    swiper.destroy(false, true);
   }
-};
+  
+  hiddenCloseclick()
+
+} );
 
 
 
-
-
-document.addEventListener("DOMContentLoaded", hiddenCloseclick());
+//Кнопка "Показать все" 
 
 function hiddenCloseclick() {
+
   let btn = document.querySelector('.brands__show-btn-action');
   btn.addEventListener("click", hiddenCloseclick);
   let content = document.getElementsByClassName('brands__section--hidden');
