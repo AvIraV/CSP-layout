@@ -17,9 +17,7 @@ button {margin: 0;
   
   .container {
     width: 100%;
-    margin: 0 auto;
     background: #FFFFFF;
-    
   }
 
   .brands__header {
@@ -50,20 +48,15 @@ button {margin: 0;
     opacity: 1;
 }
 /* Для слайдера */
-.image-slider__wrapper {
+.swiper-wrapper {
     min-width: 0;
 }
 
-/*.brands__section__item {
-  padding-bottom: 66px;
-}*/
-
-.image-slider__image {
+.brands__section__image {
     position: relative;
-    min-width: 0;  /* для корректной работы слайдера */
     width: 240px;
     height: 72px;
-    background: #FFFFFF;
+    background: #FFFFFF url('../icons/icon-arrow-go.svg') no-repeat 92% 50%;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
     display: flex;
@@ -71,39 +64,33 @@ button {margin: 0;
     justify-content: space-between;
     align-items: center;
     margin: 16px 0 16px 0;
-  
+    cursor: pointer;
 }
 
 .brands__section-wrapper:first-child {
     margin-left: 16px;
 }
 
-/*.brands__section__item:last-child {
-  margin-right: 16px;
-}*/
-
 .brands__section__link {
     text-decoration: none;
     margin-left: 16px;
-  
 }
 
-.brands__section__link svg {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    cursor: pointer;
-}
-
-.brands__section__link svg:hover,
-.brands__section__link svg:focus {
-  opacity: 0.80;
+.brands__section__image:hover,
+.brands__section__image:focus {
+    opacity: 0.78;
 }
 
 .swiper-pagination {
-  display: flex; 
-  justify-content: center; 
-  padding-bottom: 27px;
+    display: flex; 
+    justify-content: center; 
+    padding-bottom: 27px;
+}
+
+.swiper-slide {
+    width: auto;
+    height: auto;
+    min-width: 0;
 }
 
 .image-slider .swiper-pagination-bullet {
@@ -111,25 +98,19 @@ button {margin: 0;
   height: 12px;
   line-height: 12px;
   background: #DDD;
- /* font-size: 14px;*/
   border-radius: 50%; 
   margin: 0 6px; 
 }
 
-.swiper-slide {
-  width: auto;
-}
-
 .brands__show-btn {
-  display: none;
+    display: none;
 }
-
-
 
 
 @media (min-width: 768px) {
   .container {
     width: 100%;
+    margin: 0 auto;
   }
 
   .brands__section {
@@ -155,7 +136,7 @@ button {margin: 0;
    /* margin-top: 16px;*/
   }
 
- .image-slider__image  {
+  .brands__section__image  {
     width: 224px;
     height: 72px;
     margin: 0 0 16px 24px;
@@ -192,14 +173,15 @@ button {margin: 0;
     background-size: auto 100%; background-position: center;
   }
   
-  .brands__section--hidden {
-    display: none;
-  }    
 }
 
 @media (min-width: 1120px) {
   .container {
     width: 100%;
   }
-  
+  .brands__section__image  {
+    width: 240px;
+    height: 72px;
+    margin: 0 0 16px 32px;
+  }
 }

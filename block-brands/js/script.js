@@ -46,27 +46,36 @@ swiper.destroy(true, true);
   }
 });
 
-
 */
     
 
 window.onload =  () => {  // ожидаем загрузку окна браузера
   if (window.matchMedia('(max-width: 767px)').matches) { // // свайпер у нас будет работать, если разрешение эерана не превышает 767px
-    const swiper = new Swiper('.swiper-container', {  // инициализируем новый Swiper
-      direction: 'horizontal', // устанавливаем напрвление Swiper
-      loop: true,  // делаем Swiper зацикленным (Swiper самостоятельно добавит слайды в начало и конец .swiper-wrapper для создания иллюзии "бесконечности" слайдов)
-      spaceBetween: 20, // отступ между слайдами в px
+    let swiper = new Swiper('.swiper-container', {  
+      direction: 'horizontal',
+      loop: true,  // делаем Swiper зацикленным 
       slidesPerView: 'auto', // позволит устанавливать произвольную ширину слайдов, в противном случае - растянет на ширину контейнера .swiper-wrapper
-      pagination: { // подключаем пагинацию
-        el: '.swiper-pagination', // контейнер для пагинации
-        clickable: true // добавляем параметр, если хотим сделать bullets кликабельными
+      breakpoints: {
+        320: {
+          spaceBetween: 16
+        },
+        480: {
+          spaceBetween: 20
+        },
+        640: {
+          spaceBetween: 24
+        }
+      },
+      pagination: { 
+        el: '.swiper-pagination', 
+        clickable: true 
       },
       init: true
     });
-  } 
+  } else if (window.matchMedia('(width: 768px)').matches) {
+    swiper.destroy(false, true);
+  }
 };
-
-
 
 
 
@@ -81,6 +90,7 @@ function hiddenCloseclick() {
   let contentShowDesctop = document.getElementsByClassName('brands__section--show-desctop');
   //let contentText = document.getElementsByClassName('brands__section__item');
 
+
   for(let i = 0; i < content.length; i++) {
     if (content[i].style.display === "none"){
       content[i].style.display = "block";
@@ -90,11 +100,11 @@ function hiddenCloseclick() {
       btn.innerHTML = 'Показать все';
     }
   }
- 
+
   for (let i = 0; i < contentShowDesctop.length; i++) {
     if (window.innerWidth > 1119) {
       contentShowDesctop[i].style.display = "block";
-    }
+    } 
   }
   
   }
